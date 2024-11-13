@@ -554,6 +554,10 @@ video {
   display: none;
 }
 
+.active {
+  color: white;
+}
+
 .absolute {
   position: absolute;
 }
@@ -562,36 +566,16 @@ video {
   position: relative;
 }
 
-.right-0 {
-  right: 0px;
-}
-
-.top-0 {
-  top: 0px;
+.-top-2 {
+  top: -0.5rem;
 }
 
 .right-5 {
   right: 1.25rem;
 }
 
-.top-2 {
-  top: 0.5rem;
-}
-
-.-top-2 {
-  top: -0.5rem;
-}
-
 .z-50 {
   z-index: 50;
-}
-
-.float-right {
-  float: right;
-}
-
-.-m-2 {
-  margin: -0.5rem;
 }
 
 .my-10 {
@@ -599,42 +583,16 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+.-mt-14 {
+  margin-top: -3.5rem;
 }
 
 .-mt-5 {
   margin-top: -1.25rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
-}
-
-.-mt-2 {
-  margin-top: -0.5rem;
-}
-
-.-mt-10 {
-  margin-top: -2.5rem;
-}
-
-.-mt-14 {
-  margin-top: -3.5rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .flex {
@@ -661,28 +619,12 @@ video {
   min-height: 100vh;
 }
 
-.max-w-sm {
-  max-width: 24rem;
-}
-
-.max-w-md {
-  max-width: 28rem;
-}
-
-.max-w-4xl {
-  max-width: 56rem;
-}
-
-.max-w-5xl {
-  max-width: 64rem;
-}
-
-.max-w-7xl {
-  max-width: 80rem;
-}
-
 .max-w-6xl {
   max-width: 72rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .place-items-center {
@@ -701,20 +643,8 @@ video {
   justify-content: space-between;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
 .gap-7 {
   gap: 1.75rem;
-}
-
-.place-self-center {
-  place-self: center;
-}
-
-.self-stretch {
-  align-self: stretch;
 }
 
 .overflow-hidden {
@@ -743,9 +673,29 @@ video {
   background-color: hsl(246 80% 60% / var(--tw-bg-opacity));
 }
 
+.bg-custom-blueplay {
+  --tw-bg-opacity: 1;
+  background-color: hsl(195 74% 62% / var(--tw-bg-opacity));
+}
+
 .bg-custom-darkblue {
   --tw-bg-opacity: 1;
   background-color: hsl(235 46% 20% / var(--tw-bg-opacity));
+}
+
+.bg-custom-greenexercise {
+  --tw-bg-opacity: 1;
+  background-color: hsl(145 58% 55% / var(--tw-bg-opacity));
+}
+
+.bg-custom-orangeselfcar {
+  --tw-bg-opacity: 1;
+  background-color: hsl(43 84% 65% / var(--tw-bg-opacity));
+}
+
+.bg-custom-redstudy {
+  --tw-bg-opacity: 1;
+  background-color: hsl(348 100% 68% / var(--tw-bg-opacity));
 }
 
 .bg-custom-redwork {
@@ -758,33 +708,9 @@ video {
   background-color: hsl(226 43% 10% / var(--tw-bg-opacity));
 }
 
-.bg-custom-redstudy {
-  --tw-bg-opacity: 1;
-  background-color: hsl(348 100% 68% / var(--tw-bg-opacity));
-}
-
-.bg-custom-blueplay {
-  --tw-bg-opacity: 1;
-  background-color: hsl(195 74% 62% / var(--tw-bg-opacity));
-}
-
-.bg-custom-greenexercise {
-  --tw-bg-opacity: 1;
-  background-color: hsl(145 58% 55% / var(--tw-bg-opacity));
-}
-
 .bg-custom-violetsocial {
   --tw-bg-opacity: 1;
   background-color: hsl(264 64% 52% / var(--tw-bg-opacity));
-}
-
-.bg-custom-orangeselfcar {
-  --tw-bg-opacity: 1;
-  background-color: hsl(43 84% 65% / var(--tw-bg-opacity));
-}
-
-.p-6 {
-  padding: 1.5rem;
 }
 
 .p-8 {
@@ -805,28 +731,8 @@ video {
   padding-bottom: 1.5rem;
 }
 
-.pt-9 {
-  padding-top: 2.25rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
-}
-
-.pt-1 {
-  padding-top: 0.25rem;
-}
-
 .pt-14 {
   padding-top: 3.5rem;
-}
-
-.pt-20 {
-  padding-top: 5rem;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .font-rubik {
@@ -849,32 +755,24 @@ video {
   font-size: 18px;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
 .font-light {
   font-weight: 300;
-}
-
-.font-thin {
-  font-weight: 100;
 }
 
 .font-semibold {
   font-weight: 600;
 }
 
-.leading-tight {
-  line-height: 1.25;
-}
-
-.leading-normal {
-  line-height: 1.5;
+.font-thin {
+  font-weight: 100;
 }
 
 .leading-snug {
   line-height: 1.375;
+}
+
+.leading-tight {
+  line-height: 1.25;
 }
 
 .text-custom-desaturatedblue {
@@ -890,6 +788,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:bg-custom-desaturatedblue:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(235 45% 61% / var(--tw-bg-opacity));
 }
 
 @media (min-width: 1024px) {
@@ -909,7 +812,7 @@ video {
     align-items: flex-start;
   }
 
-  .lg\:p-9 {
-    padding: 2.25rem;
+  .lg\:p-8 {
+    padding: 2rem;
   }
 }
