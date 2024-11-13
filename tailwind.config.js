@@ -22,6 +22,7 @@ module.exports = {
       fontSize: {
         "last-hrs": "15px",
         "titles": "18px",
+        "name-sm": "25px",
         "name": "40px",
         "hrs": "60px"
       }
