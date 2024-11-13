@@ -5,107 +5,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
+<main class="font-rubik text-white bg-custom-verydarkblue min-h-screen grid place-items-center">
+  <div class="grid lg:grid-cols-4 gap-7 content-stretch max-w-6xl">
+    <div class="lg:row-span-2">
+      <div class="bg-custom-blue lg:p-9 rounded-xl relative z-50">
+        <img src="images/image-jeremy.png" class=" rounded-full h-20 border-2 border-white" />
+        <div class="my-10 leading-tight">
+          <p class="text-last-hrs text-custom-paleblue">Report for</p>
+          <p class="text-white text-name font-thin">Jeremy Robson</p>
+        </div>
+      </div>
+      <div class="bg-custom-darkblue text-custom-desaturatedblue rounded-xl px-9 pt-14 pb-6 -mt-5">
+        <ul>
+          <li class="flex lg:flex-col lg:items-start ">
+            <button class="text-titles py-2">Daily</button>
+            <button class="text-titles py-2">Weekly</button>
+            <button class="text-titles py-2">Monthly</button>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-  <p>Report for</p>
-  <p>Jeremy Robson</p>
+    <div>
+      <div class="relative h-[100px] bg-custom-redwork rounded-xl overflow-hidden">
+        <img class="absolute -top-2 right-5" src="images/icon-work.svg" alt="" />
+      </div>
+      <div class="bg-custom-darkblue p-8 rounded-xl relative -mt-14 z-1">
+        <div class="flex items-center justify-between">
+          <p class=" text-titles font-semibold">Work</p>
+          <img src="images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="daily mt-4 leading-snug">
+          <p class="text-hrs font-light">5hrs</p> <!-- daily -->
+          <p class="text-custom-paleblue">Last Week - 7hrs</p> <!-- daily -->
+        </div>
+        <div class="weekly my-4 hidden">
+          <p>32hrs</p> <!-- weekly -->
+          <p class="text-custom-paleblue">Last Week - 36hrs</p> <!-- weekly -->
+        </div>
+        <div class="monthly my-4 hidden">
+          <p>103hrs</p> <!-- monthly -->
+          <p class="text-custom-paleblue">Last Week - 128hrs</p> <!-- monthly -->
+        </div>
+      </div>
+    </div>
 
-  <ul>
-    <li>
-      <button>Daily</button>
-      <button>Weekly</button>
-      <button>Monthly</button>
+    <div>
+      <div class="relative h-[100px] bg-custom-blueplay rounded-xl overflow-hidden">
+        <img class="absolute -top-2 right-5" src="images/icon-play.svg" alt="" />
+      </div>
+      <div class="bg-custom-darkblue p-8 rounded-xl relative -mt-14 z-1">
+        <div class="flex items-center justify-between">
+          <p class=" text-titles font-semibold">Play</p>
+          <img src="images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="daily mt-4 leading-snug">
+          <p class="text-hrs font-light">1hr</p> <!-- daily -->
+          <p class="text-custom-paleblue">Last Week - 2hrs</p> <!-- daily -->
+        </div>
+        <div class="weekly mt-4 leading-snug hidden">
+          <p class="text-hrs font-light">10hrs</p> <!-- weekly -->
+          <p class="text-custom-paleblue">Last Week - 8hrs</p> <!-- weekly -->
+        </div>
+        <div class="monthly mt-4 leading-snug hidden">
+          <p class="text-hrs font-light">23hrs</p> <!-- monthly -->
+          <p class="text-custom-paleblue">Last Week - 29hrs</p> <!-- monthly -->
+        </div>
+      </div>
+    </div>
 
-    </li>
-  </ul>
+    <div>
+      <div class="relative h-[100px] bg-custom-redstudy rounded-xl overflow-hidden">
+        <img class="absolute -top-2 right-5" src="images/icon-study.svg" alt="" />
+      </div>
+      <div class="bg-custom-darkblue p-8 rounded-xl relative -mt-14 z-1">
+        <div class="flex items-center justify-between">
+          <p class=" text-titles font-semibold">Study</p>
+          <img src="images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="daily mt-4 leading-snug">
+          <p class="text-hrs font-light">0hrs</p> <!-- daily -->
+          <p class="text-custom-paleblue">Last Week - 1hr</p> <!-- daily -->
+        </div>
+        <div class="weekly mt-4 leading-snug hidden">
+          <p class="text-hrs font-light">4hrs</p> <!-- weekly -->
+          <p class="text-custom-paleblue">Last Week - 7hrs</p> <!-- weekly -->
+        </div>
+        <div class="monthly mt-4 leading-snug hidden">
+          <p class="text-hrs font-light">13hrs</p> <!-- monthly -->
+          <p class="text-custom-paleblue">Last Week - 19hrs</p> <!-- monthly -->
+        </div>
+      </div>
+    </div>
 
+    <div>
+      <div class="relative h-[100px] bg-custom-greenexercise rounded-xl overflow-hidden">
+        <img class="absolute -top-2 right-5" src="images/icon-exercise.svg" alt="" />
+      </div>
+      <div class="bg-custom-darkblue p-8 rounded-xl relative -mt-14 z-1">
+        <div class="flex items-center justify-between">
+          <p class=" text-titles font-semibold">Exercise</p>
+          <img src="images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="daily mt-4 leading-snug">
+          <p class="text-hrs font-light">1hr</p> <!-- daily -->
+          <p class="text-custom-paleblue">Last Week - 1hr</p> <!-- daily -->
+        </div>
+        <div class="weekly mt-4 leading-snug hidden">
+          <p class="text-hrs font-light">4hrs</p> <!-- weekly -->
+          <p class="text-custom-paleblue">Last Week - 5hrs</p> <!-- weekly -->
+        </div>
+        <div class="monthly mt-4 leading-snug hidden">
+          <p class="text-hrs font-light">11hrs</p> <!-- monthly -->
+          <p class="text-custom-paleblue">Last Week - 18hrs </p><!-- monthly -->
+        </div>
+      </div>
+    </div>
 
-  <p>Work</p>
-  <div class="daily">
-    <p>5hrs</p> <!-- daily -->
-    <p>Previous - 7hrs</p> <!-- daily -->
-  </div>
-  <div class="weekly">
-    <p>32hrs</p> <!-- weekly -->
-    <p>Previous - 36hrs</p> <!-- weekly -->
-  </div>
-  <div class="monthly">
-    <p>103hrs</p> <!-- monthly -->
-    <p>Previous - 128hrs</p> <!-- monthly -->
-  </div>
+    <div>
+      <div class="relative h-[100px] bg-custom-violetsocial rounded-xl overflow-hidden">
+        <img class="absolute -top-2 right-5" src="images/icon-social.svg" alt="" />
+      </div>
+      <div class="bg-custom-darkblue p-8 rounded-xl relative -mt-14 z-1">
+        <div class="flex items-center justify-between">
+          <p class=" text-titles font-semibold">Social</p>
+          <img src="images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="daily mt-4 leading-snug">
+          <p class="text-hrs font-light">1hr</p> <!-- daily -->
+          <p class="text-custom-paleblue">Last Week - 3hrs</p> <!-- daily -->
+        </div>
+        <div class="weekly mt-4 leading-snug hidden">
+          <p class="text-hrs font-light">5hrs</p> <!-- weekly -->
+          <p class="text-custom-paleblue">Last Week - 10hr</p>s <!-- weekly -->
+        </div>
+        <div class="monthly mt-4 leading-snug hidden">
+          <p class="text-hrs font-light">21hrs</p> <!-- monthly -->
+          <p class="text-custom-paleblue">Last Week - 23hrs</p> <!-- monthly -->
+        </div>
+      </div>
+    </div>
 
-  <p>Play</p>
-  <div class="daily">
-    <p>1hr</p> <!-- daily -->
-    <p>Previous - 2hrs</p> <!-- daily -->
-  </div>
-  <div class="weekly">
-    <p>10hrs</p> <!-- weekly -->
-    <p>Previous - 8hrs</p> <!-- weekly -->
-  </div>
-  <div class="monthly">
-    <p>23hrs</p> <!-- monthly -->
-    <p>Previous - 29hrs</p> <!-- monthly -->
-  </div>
-
-  <p>Study</p>
-  <div class="daily">
-    <p>0hrs</p> <!-- daily -->
-    <p>Previous - 1hr</p> <!-- daily -->
-  </div>
-  <div class="weekly">
-    <p>4hrs</p> <!-- weekly -->
-    <p>Previous - 7hrs</p> <!-- weekly -->
-  </div>
-  <div class="monthly">
-    <p>13hrs</p> <!-- monthly -->
-    <p>Previous - 19hrs</p> <!-- monthly -->
-  </div>
-
-  <p>Exercise</p>
-  <div class="daily">
-    <p>1hr</p> <!-- daily -->
-    <p>Previous - 1hr</p> <!-- daily -->
-  </div>
-  <div class="weekly">
-    <p>4hrs</p> <!-- weekly -->
-    <p>Previous - 5hrs</p> <!-- weekly -->
-  </div>
-  <div class="monthly">
-    <p>11hrs</p> <!-- monthly -->
-    <p>Previous - 18hrs </p><!-- monthly -->
-  </div>
-
-  <p>Social</p>
-  <div class="daily">
-    <p>1hr</p> <!-- daily -->
-    <p>Previous - 3hrs</p> <!-- daily -->
-  </div>
-  <div class="weekly">
-    <p>5hrs</p> <!-- weekly -->
-    <p>Previous - 10hr</p>s <!-- weekly -->
-  </div>
-  <div class="monthly">
-    <p>21hrs</p> <!-- monthly -->
-    <p>Previous - 23hrs</p> <!-- monthly -->
-  </div>
-
-  <p>Self Care</p>
- <div class="daily">
-  <p>0hrs</p> <!-- daily -->
-  <p>Previous - 1hr</p> <!-- daily -->
- </div>
- <div class="weekly">
-  <p>2hrs</p> <!-- weekly -->
-  <p>Previous - 2hrs</p> <!-- weekly -->
- </div>
- <div class="monthly">
-  <p>7hrs</p> <!-- monthly -->
-  <p>Previous - 11hrs</p> <!-- monthly -->
- </div>
-
+    <div>
+      <div class="relative h-[100px] bg-custom-orangeselfcar rounded-xl overflow-hidden">
+        <img class="absolute -top-2 right-5" src="images/icon-self-care.svg" alt="" />
+      </div>
+      <div class="bg-custom-darkblue p-8 rounded-xl relative -mt-14 z-1">
+        <div class="flex items-center justify-between">
+          <p class=" text-titles font-semibold">Self Care</p>
+          <img src="images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="daily mt-4 leading-snug">
+         <p class="text-hrs font-light">0hrs</p> <!-- daily -->
+         <p class="text-custom-paleblue">Last Week - 1hr</p> <!-- daily -->
+        </div>
+        <div class="weekly mt-4 leading-snug hidden">
+         <p class="text-hrs font-light">2hrs</p> <!-- weekly -->
+         <p class="text-custom-paleblue">Last Week - 2hrs</p> <!-- weekly -->
+        </div>
+        <div class="monthly mt-4 leading-snug hidden">
+         <p class="text-hrs font-light">7hrs</p> <!-- monthly -->
+         <p class="text-custom-paleblue">Last Week - 11hrs</p> <!-- monthly -->
+        </div>
+      </div>
+    </div>
+</div>
+</main>
 </body>
 </html>

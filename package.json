@@ -1,0 +1,23 @@
+{
+  "name": "time-tracking-dashboard",
+  "version": "1.0.0",
+  "description": "![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./style.css -o ./dist/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fikerte-T/time-tracking-dashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fikerte-T/time-tracking-dashboard/issues"
+  },
+  "homepage": "https://github.com/Fikerte-T/time-tracking-dashboard#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  }
+}
