@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dist/style.css">
+</head>
+<body>
+<main class="font-rubik text-white bg-custom-verydarkblue min-h-screen grid place-items-center">
+  <div id="container" class="grid lg:grid-cols-4 gap-7 content-stretch max-w-6xl">
+    <div class="lg:row-span-2">
+      <div class="bg-custom-blue px-8 flex items-center lg:flex-col lg:items-start lg:p-8 rounded-xl relative z-50">
+        <img src="images/image-jeremy.png" class=" rounded-full h-20 border-2 border-white mr-5" />
+        <div class="my-10 leading-tight">
+          <p class="text-last-hrs text-custom-paleblue">Report for</p>
+          <p class="text-white text-name-sm lg:text-name font-thin">Jeremy Robson</p>
+        </div>
+      </div>
+      <div class="bg-custom-darkblue text-custom-desaturatedblue rounded-xl px-9 pt-14 pb-6 -mt-5">
+        <ul>
+          <li class="flex justify-between lg:flex-col lg:items-start ">
+            <button id="daily-tracker" class="text-titles lg:py-2 active hover:text-custom-paleblue">Daily</button>
+            <button id="weekly-tracker" class="text-titles lg:py-2 hover:text-custom-paleblue">Weekly</button>
+            <button id="monthly-tracker" class="text-titles lg:py-2 hover:text-custom-paleblue">Monthly</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="handleClick.js"></script>
+<script>
+  // change icon
+  const changeIcon = (title) => {
+    switch (title){
+      case 'Work':
+        return {src: '/images/icon-work.svg', bg: 'bg-custom-redwork'};
+        break    
+      case 'Play':
+        return {src: '/images/icon-play.svg', bg: 'bg-custom-blueplay'};
+        break;
+      case 'Study':
+        return {src: '/images/icon-study.svg', bg: 'bg-custom-redstudy'};
+        break;
+      case 'Exercise':
+        return {src: '/images/icon-exercise.svg', bg: 'bg-custom-greenexercise'};
+        break;
+      case 'Social':
+        return {src: '/images/icon-social.svg', bg: 'bg-custom-violetsocial'};
+        break;
+      case 'Self Care':
+        return {src: '/images/icon-self-care.svg', bg: 'bg-custom-orangeselfcare'};
+        break;
+    }  
+  }
+  //append item
+  const appendItem = (item) => {
+    const card = document.createElement('div')
+    card.innerHTML = `
+      <div id="colored-div" class="${changeIcon(item.title).bg} relative h-[100px] rounded-xl overflow-hidden">
+        <img class="absolute -top-2 right-5" src=${changeIcon(item.title).src} alt="" />
+      </div>
+      <div class="bg-custom-darkblue p-4 lg:p-8 rounded-xl relative -mt-14 z-1 hover:bg-custom-desaturatedblue cursor-pointer">
+        <div class="flex items-center justify-between">
+          <p class="title text-titles font-semibold">${item.title}</p>
+          <img src="images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="daily flex items-center justify-between lg:flex-col lg:items-start lg:mt-4 lg:leading-snug">
+          <p class="font-light text-name lg:text-hrs">${item.timeframes.daily.current} hrs</p> 
+          <p class="text-custom-paleblue">Last Week - ${item.timeframes.daily.previous} hrs</p> 
+        </div>
+        <div class="weekly flex items-center justify-between lg:flex-col lg:items-start lg:mt-4 lg:leading-snug hidden">
+          <p class="font-light text-name lg:text-hrs">${item.timeframes.weekly.current} hrs</p> 
+          <p class="text-custom-paleblue">Last Week - ${item.timeframes.weekly.previous} hrs</p> 
+        </div>
+        <div class="monthly flex items-center justify-between lg:flex-col lg:items-start lg:mt-4 lg:leading-snug hidden">
+          <p class="font-light text-name lg:text-hrs">${item.timeframes.weekly.current} hrs</p> 
+          <p class="text-custom-paleblue">Last Week - ${item.timeframes.monthly.previous} hrs</p> 
+        </div>
+      </div>
+    `
+    container.appendChild(card)
+  }
+  //populate dom
+  const populateDom = (data) => {
+    data.forEach(item => {
+      appendItem(item)
+    });
+  }
+  // fetch data
+  fetch('/data.json').then(response => {
+    if(!response.ok)
+      return console.log('error')
+    return response.json()
+  })
+  .then(data => {
+    populateDom(data)
+  })
+  const dailyTracker = document.getElementById('daily-tracker');
+  const monthlyTracker = document.getElementById('monthly-tracker');
+  const weeklyTracker = document.getElementById('weekly-tracker');
+  const container = document.getElementById('container')
+  dailyTracker.onclick = handleDailyTracker;
+  monthlyTracker.onclick = handleMonthlyTracker;
+  weeklyTracker.onclick = handleWeeklyTracker;
+</script>
+</body>
+</html>
