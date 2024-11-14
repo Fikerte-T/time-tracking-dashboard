@@ -722,6 +722,11 @@ video {
   background-color: hsl(145 58% 55% / var(--tw-bg-opacity));
 }
 
+.bg-custom-orangeselfcare {
+  --tw-bg-opacity: 1;
+  background-color: hsl(43 84% 65% / var(--tw-bg-opacity));
+}
+
 .bg-custom-redstudy {
   --tw-bg-opacity: 1;
   background-color: hsl(348 100% 68% / var(--tw-bg-opacity));
@@ -740,11 +745,6 @@ video {
 .bg-custom-violetsocial {
   --tw-bg-opacity: 1;
   background-color: hsl(264 64% 52% / var(--tw-bg-opacity));
-}
-
-.bg-custom-orangeselfcare {
-  --tw-bg-opacity: 1;
-  background-color: hsl(43 84% 65% / var(--tw-bg-opacity));
 }
 
 .p-4 {
