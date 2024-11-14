@@ -653,10 +653,6 @@ video {
   min-height: 100vh;
 }
 
-.max-w-6xl {
-  max-width: 72rem;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -677,8 +673,8 @@ video {
   justify-content: space-between;
 }
 
-.gap-7 {
-  gap: 1.75rem;
+.gap-\[1\.4rem\] {
+  gap: 1.4rem;
 }
 
 .overflow-hidden {
@@ -761,6 +757,11 @@ video {
   padding-right: 2.25rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -839,6 +840,10 @@ video {
     margin-top: 1rem;
   }
 
+  .lg\:max-w-6xl {
+    max-width: 72rem;
+  }
+
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -849,6 +854,10 @@ video {
 
   .lg\:items-start {
     align-items: flex-start;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
   }
 
   .lg\:p-8 {
