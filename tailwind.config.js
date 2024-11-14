@@ -10,7 +10,7 @@ module.exports = {
         'custom-redstudy': 'hsl(348, 100%, 68%)',
         'custom-greenexercise': 'hsl(145, 58%, 55%)',
         'custom-violetsocial': 'hsl(264, 64%, 52%)',
-        'custom-orangeselfcar': 'hsl(43, 84%, 65%)',
+        'custom-orangeselfcare': 'hsl(43, 84%, 65%)',
         'custom-verydarkblue': 'hsl(226, 43%, 10%)',
         'custom-darkblue': 'hsl(235, 46%, 20%)',
         'custom-desaturatedblue': 'hsl(235, 45%, 61%)',
