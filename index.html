@@ -14,7 +14,7 @@
 </head>
 <body>
 <main class="font-rubik text-white bg-custom-verydarkblue min-h-screen grid place-items-center">
-  <div id="container" class="grid lg:grid-cols-4 gap-7 content-stretch max-w-6xl">
+  <div id="container" class="grid gap-[1.4rem] content-stretch py-20 lg:p-0 lg:max-w-6xl lg:grid-cols-4">
     <div class="lg:row-span-2">
       <div class="bg-custom-blue px-8 flex items-center lg:flex-col lg:items-start lg:p-8 rounded-xl relative z-50">
         <img src="images/image-jeremy.png" class=" rounded-full h-20 border-2 border-white mr-5" />
@@ -73,16 +73,16 @@
           <img src="images/icon-ellipsis.svg" alt="">
         </div>
         <div class="daily flex items-center justify-between lg:flex-col lg:items-start lg:mt-4 lg:leading-snug">
-          <p class="font-light text-name lg:text-hrs">${item.timeframes.daily.current} hrs</p> 
-          <p class="text-custom-paleblue">Last Week - ${item.timeframes.daily.previous} hrs</p> 
+          <p class="font-light text-name lg:text-hrs">${item.timeframes.daily.current}hrs</p> 
+          <p class="text-custom-paleblue">Last Week - ${item.timeframes.daily.previous}hrs</p> 
         </div>
         <div class="weekly flex items-center justify-between lg:flex-col lg:items-start lg:mt-4 lg:leading-snug hidden">
-          <p class="font-light text-name lg:text-hrs">${item.timeframes.weekly.current} hrs</p> 
-          <p class="text-custom-paleblue">Last Week - ${item.timeframes.weekly.previous} hrs</p> 
+          <p class="font-light text-name lg:text-hrs">${item.timeframes.weekly.current}hrs</p> 
+          <p class="text-custom-paleblue">Last Week - ${item.timeframes.weekly.previous}hrs</p> 
         </div>
         <div class="monthly flex items-center justify-between lg:flex-col lg:items-start lg:mt-4 lg:leading-snug hidden">
-          <p class="font-light text-name lg:text-hrs">${item.timeframes.weekly.current} hrs</p> 
-          <p class="text-custom-paleblue">Last Week - ${item.timeframes.monthly.previous} hrs</p> 
+          <p class="font-light text-name lg:text-hrs">${item.timeframes.weekly.current}hrs</p> 
+          <p class="text-custom-paleblue">Last Week - ${item.timeframes.monthly.previous}hrs</p> 
         </div>
       </div>
     `
@@ -104,13 +104,17 @@
   .then(data => {
     populateDom(data)
   })
+
   const dailyTracker = document.getElementById('daily-tracker');
   const monthlyTracker = document.getElementById('monthly-tracker');
   const weeklyTracker = document.getElementById('weekly-tracker');
   const container = document.getElementById('container')
+
   dailyTracker.onclick = handleDailyTracker;
   monthlyTracker.onclick = handleMonthlyTracker;
   weeklyTracker.onclick = handleWeeklyTracker;
+  
 </script>
+
 </body>
 </html>
